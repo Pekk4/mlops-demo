@@ -7,7 +7,7 @@ spec:
   project: default
 
   source:
-    repoURL: https://github.com/<org>/mlops-demo.git
+    repoURL: https://github.com/pekk4/mlops-demo.git
     targetRevision: master
     path: manifests
 
