@@ -43,7 +43,7 @@ jobs:
         run: |
           yq -y -i ".metadata.name = \"wine-train-${{ github.sha }}\"" manifests/training/training-workflow.yaml
           yq -y -i '
-            (.spec.arguments.parameters[] | select(.name == "image")).value =
+            (.spec.arguments.parameters[] | select(.name == "training_image")).value =
             "ghcr.io/${{ env.REPO }}:${{ github.sha }}"
           ' manifests/training/training-workflow.yaml
 
