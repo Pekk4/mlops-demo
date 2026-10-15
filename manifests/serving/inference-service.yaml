@@ -21,4 +21,4 @@ spec:
       modelFormat:
         name: sklearn
       protocolVersion: v2
-      storageUri: "s3://mlflow/0/models/m-ab2cf0545ac64394a97a59bd26b23469/artifacts"
+      storageUri: "s3://mlflow/0/models/m-42e22e2c4d7148828166fefa23af77bd/artifacts"
