@@ -4,6 +4,7 @@ metadata:
   name: "wine"
   namespace: default
   annotations:
+    serving.kserve.io/deploymentMode: RawDeployment # Ohitetaan Knative-ongelmat
     prometheus.io/scrape: "true"
     prometheus.io/path: "/metrics"
     prometheus.io/port: "8082"
@@ -13,12 +14,11 @@ metadata:
 spec:
   predictor:
     serviceAccountName: kserve-sa
-    containers:
-      - name: kserve-container
-        image: k3d-pipeline-registry.localhost:5000/seldonio/mlserver:v1.5.0-paikallinen
-        imagePullPolicy: IfNotPresent
     model:
       modelFormat:
         name: sklearn
       protocolVersion: v2
       storageUri: "s3://mlflow/0/models/m-42e22e2c4d7148828166fefa23af77bd/artifacts"
+      # Klusterin sisäinen osoite rekisteriin portissa 5000:
+      image: k3d-pipeline-registry:5000/seldonio/mlserver:v1.5.0-paikallinen
+      imagePullPolicy: IfNotPresent
