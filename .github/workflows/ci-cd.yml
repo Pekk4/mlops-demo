@@ -1,4 +1,4 @@
-name: Build & Publish Test App
+name: Build and publish training image
 
 on:
   push:
