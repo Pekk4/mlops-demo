@@ -18,6 +18,6 @@ spec:
       modelFormat:
         name: sklearn
       protocolVersion: v2
-      storageUri: "s3://mlflow/0/models/m-acc4e7acfcc44851afc89ec0d5131e7a/artifacts"
+      storageUri: "s3://mlflow/0/models/m-5aa4497e30814a54bbbea42107ee8b93/artifacts"
       image: pipeline-registry:5000/seldonio/mlserver:v1.5.0-paikallinen
       imagePullPolicy: IfNotPresent
