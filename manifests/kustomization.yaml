@@ -3,4 +3,5 @@ kind: Kustomization
 
 resources:
   - training/training-workflow.yaml
+  - serving/inference-service.yaml
   - monitoring/inference-failure-alert.yaml
